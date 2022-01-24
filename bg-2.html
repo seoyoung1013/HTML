@@ -1,0 +1,29 @@
+<!-- 배경 사진 고정, 속성 한번에 작성하기 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>배경 이미지</title>
+  <style>
+    body {
+    /* background-color: #fff8dc;  배경색 지정하기
+      background-image :  url('images/bg2.jpg'); /*배경 이미지 지정하기
+      background-repeat: no-repeat; repeat-x : 가로로 반복, repeat-y : 세로로 반복, no-repeat : 반복 안함
+      background-position: top right; 배경 이미지 위치 설정
+      background-attachment: fixed;  사진 고정하기  */
+      /* background 속성 */
+      background: url('images/bg2.png') no-repeat top right fixed; /*대부분 위의 속성들을 background를 사용하여 한번에 표현함*/
+
+    }
+
+    #container{
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>배경 꾸미기</h1>
+  </div>
+</body>
+</html>

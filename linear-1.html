@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>선형 그러데이션</title>
+  <style>
+	div {
+		width:500px;
+		height:300px;
+		border-radius:10px;
+	}
+  	.grad {
+  		background: blue;
+      background: linear-gradient(to right bottom, blue, white); 
+      /*background: linear-gradient(180deg, white 30%, skyblue 60%, blue);*/
+       /* linear-gradient() : 선형 그라데이션을 만드는 구문, 방법1: to(끝나는) 방향, 방법2: (끝나는) 각도, 왼쪽 위에서 오른쪽 아래 방향으로, 파랑에서 흰색으로 */
+  	}
+  </style>
+</head>
+<body>
+  <div class="grad"></div>
+</body>
+</html>
