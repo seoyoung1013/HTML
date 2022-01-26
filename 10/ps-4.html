@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>가상 요소</title>
+  <style>
+    .container {
+      width: 960px;
+      margin : 0 auto;
+    }
+    ul li {
+      margin:15px;
+    }
+    li.new::after { 
+    /*:가상 선택자 : 가상선택자는 꾸밈을 위해서 의미없는 태그를 더 추가해야 될 때,
+     태그 대신에 가상으로 처리해 주는 쓸모 많은 css 기능
+     after -> 해당 태그의 다음 위치에 놓여진다. */
+      content:"NEW!!";
+      font-size:x-small;
+      padding:2px 4px;
+      margin: 0 10px;
+      border-radius:2px;
+      background:#f00;
+      color:#fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>제품 목록</h1>
+    <ul>
+      <li class="new">제품 A</li>
+      <li>제품 B</li>
+      <li>제품 C</li>
+      <li class="new">제품 D</li>
+    </ul>
+  </div>
+</body>
+</html>
