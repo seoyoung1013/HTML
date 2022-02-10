@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    console.log('log1:'+txt);
+
+    if (true) {
+      var txt = 'text';
+      console.log('log2:'+txt);
+    }
+
+    console.log('log3:'+txt);
+  </script>
+</body>
+</html>
+
+<!--
+  첫줄의 console.log(txt) 에서 txt 변수가 선언되지 않은 상태인데 에러 발생 안함.
+  if 블럭 안에서 txt 변수의 선언이 이루어지고 호이스트되어 가능.
+  실행시 첫번째 콘솔 출력은 에러가 아닌 undenfined.
+-->
