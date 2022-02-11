@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>출력문 예제</title>
+</head>
+<body>
+  <h2>Hello World</h2>
+  <h3 id="result"></h3>
+  <script>
+    var name = 'HongGilDong';
+    //document.write(name);
+    document.getElementById("result").innerHTML = name;
+    alert(name);
+    console.log(name);
+  </script>
+</body>
+</html>
+
+<!-- 출력문 예제
+HTML의 <h3> 태그는 id=result 로 선언되고 내용은 비어 있음.
+document.write() 를 이용하면 원래 HTML 내용을 지우고 출력.
+document.getElementById() 는 id가 result 인 태그를 찾아 이름을 출력-->
