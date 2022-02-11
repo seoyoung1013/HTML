@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for-in, for-of-for문 예제</title>
+</head>
+<body>
+  <script>
+    const colors = ['red', 'blue', 'green'];
+
+    console.log('## for-in ##');
+    for (var index in colors) {
+      console.log( colors[index] );
+    }
+
+    console.log('## for-of-for ##');
+    for (var value of colors) {
+      console.log( value );
+    }
+
+  </script>
+</body>
+</html>
+
+<!--
+  제어문 종합 실습 예제, for-in, for-of-for문
+  배열 데이터를 이용한 for, while, forEach 예제 입니다. 집합형 데이터를 처리하는 경우 일반적인 for 문 보다 forEach 가 편리한 경우가 많습니다.
+  for-in 에서 index 변수는 객체의 속성(배열의 경우 인덱스가 됨)이 전달됨.
+-->

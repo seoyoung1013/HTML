@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for, while, forEach문</title>
+</head>
+<body>
+  <script>
+    console.log('## for ##');
+    const colors = ['red', 'blue', 'green'];
+    for (let i = 0; i < colors.length; i++) {
+      console.log( colors[i] );
+    }
+
+    console.log('## while ##');	
+    var i=0;
+    while (colors[i] != null) {
+      console.log( colors[i] );
+      i++;
+    }
+
+    console.log('## forEach ##');
+    colors.forEach(function(value) {
+      console.log(value);
+    });
+
+    console.log('## forEach with Arrow ##');
+    colors.forEach( value => console.log(value));
+  </script>
+</body>
+</html>
+
+<!--
+  제어문 종합 실습 예제, for, while, forEach문
+  배열 데이터를 이용한 for, while, forEach 예제 입니다. 집합형 데이터를 처리하는 경우 일반적인 for 문 보다 forEach 가 편리한 경우가 많습니다.
+  배열데이터 처리를 위해 for, while 은 인덱스로 접근.
+  forEach 의 경우 ES6 의 => 연산자 사용으로 간결한 코드 사용 가능.
+-->

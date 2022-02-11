@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수 사용</title>
+</head>
+<body>
+  <script>
+    const colors = ['red', 'blue', 'green']; 
+    console.log("Original Array: ",colors);
+
+    colors.push('yellow'); /* push(): 배열의 끝에 값을 추가 */
+    console.log("push('yellow'):", colors); 
+
+    colors.pop(); /* pop(): 배열 마지막 값을 제거 */
+    console.log('pop(): ', colors);
+
+    colors.reverse(); /* reverse(): 배열을 역순으로 재배치*/
+    console.log('reverse(): ', colors);
+
+    colors.sort(); /* sort(): 배열 데이터를 정렬*/
+    console.log('sort(): ', colors);
+
+    const splicedcolors = colors.splice(0, 2); /* splice(): 배열값을 추가하거나 제거해서 반환*/
+    console.log('splice():', splicedcolors);
+
+    const newColors = colors.join("-"); /*join(): 배열 데이터 사이에 원하는 문자열을 넣어 구분자로 사용*/
+    console.log('join():', newColors);
+  </script>
+</body>
+</html>
+
+<!--
+  배열관련 함수 사용
+  splice() 의 경우 시작인덱스,제거할 데이터 수 를 파라미터로 지정.
+  예제에서 0 인덱스에서 2개의 값을 잘라 리턴하므로 blue, green 이 새로운 배열로 저장.
+  join() 은 지정한 구분자를 이용한 새로운 배열을 리턴.
+-->
+
+<!--
+    "Original Array: ", ["red", "blue", "green"]
+    "push('yellow'):", ["red", "blue", "green", "yellow"]
+    "pop(): ", ["red", "blue", "green"]
+    "reverse(): ", ["green", "blue", "red"]
+    "sort(): ", ["blue", "green", "red"]
+    "splice():", ["blue", "green"]
+    "join():", "red"
+-->
