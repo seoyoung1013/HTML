@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수 관련 예제</title>
+</head>
+<body>
+  <script>
+    function calc(a, b) {
+    let sum1 = a + b;
+    sum2 = a + b;
+    return sum1;
+  }
+
+  console.log(calc(20, 30)); // 50
+
+
+  var calc1 = function(a, b) {
+    return a+b;
+  }
+
+  function calc2(func) {
+    console.log(func(20,30));
+  }
+
+  console.log(calc1(20,30));
+  calc2(calc1);
+
+  // 배열원소로 함수 선언.
+  let funcArr = [function() {console.log("v1")},"v2"];
+
+  // 맵원소로 함수 선언.
+  let mapArr = new Map();
+  mapArr.set("calcFunc",function(n1,n2) {return n1*n2});
+
+  console.log(funcArr[0]());
+  console.log(mapArr.get("calcFunc")(20,10));
+  </script>
+</body>
+</html>
+
+<!--
+  함수 관련 예제
+  calc1 변수는 함수로 선언되고 calc2 함수는 인자로 함수를 받는다.
+  calc2(calc1)과 같이 함수의 인자로 함수를 전달 한다.
+  funcArr 은 배열의 원소에 함수를 사용하는 방법을 보여준다.
+  map의 원소로도 함수를 사용할 수 있다.
+-->

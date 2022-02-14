@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Set 기본 예제</title>
+</head>
+<body>
+  <script>
+    const set = new Set();
+    set.add("HongGilDong");
+    set.add("KimSanRang");
+    set.add("KangDongSu");
+
+    console.log("## Original Set: forEach")
+    set.forEach((value) => console.log(value));
+
+    console.log("## Original Set: for-of")
+    for(let item of set ) {
+      console.log(item);
+    }
+
+    set.delete("KangDongSu");
+    console.log("## After delete KangDongSu has: "+ set.has('KangDongSu'));
+
+    console.log("## new Array from Set")
+    let arr = Array.from(set);
+    console.log(arr);
+  </script>
+</body>
+</html>
+
+<!--
+  출력
+  "## Original Set: forEach"
+"HongGilDong"
+"KimSanRang"
+"KangDongSu"
+"## Original Set: for-of"
+"HongGilDong"
+"KimSanRang"
+"KangDongSu"
+"## After delete KangDongSu has: false"
+"## new Array from Set"
+["HongGilDong", "KimSanRang"]
+
+-Array.from()을 이용하면 Set을 배열로 변환 가능
+-->
