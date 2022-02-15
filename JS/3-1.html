@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>이벤트 핸들러</title>
+</head>
+<body>
+  <form>
+  <input type="button" value="Button1" onclick="btnClick(event)">
+
+  <input id="b2" type="button" value="Button2">
+  </form>
+  <script>
+    function btnClick(event){
+      alert(event.target.value+"클릭됨!!");
+    }
+    document.getElementById('b2').onclick = function(event) {alert(event.target.value+"클릭됨!!")}
+  </script>
+</body>
+</html>
+
+<!--
+  이벤트 핸들러
+  자바스크립트에서 이벤트를 처리하는 방법으로 HTML 속성으로 지정하는 방법과 자바스크립트에서 DOM 엘리먼트를 이용해 콜백함수를 구현하는 방법을 사용한 예제
+-->

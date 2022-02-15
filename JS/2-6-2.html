@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>객체 이니셜라이저</title>
+</head>
+<body>
+  <script>
+    let student = {
+    'id': 2019101,
+    'name': 'HongGilDong',
+    'scores': [95,80,91,85],
+    'getTotalScore': function() {
+      return this.scores.reduce((prev, curr) => prev + curr);
+    }
+  }
+  console.log(student.getTotalScore());
+  </script>
+
+</body>
+</html>
+
+<!--
+  객체 이니셜라이저
+  객체 선언은 {} 블럭으로 이루어 짐.
+  `key`:value 구조
+  getTotalScore 는 메서드로 배열의 reduce() 를 이용해 원소들의 합을 구한다
+-->

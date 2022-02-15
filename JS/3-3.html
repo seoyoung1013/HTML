@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트 종합 예제</title>
+  <link rel="stylesheet" type="text/css" href="css/3-3.css">
+</head>
+<body>
+  <h2>주소록 예제</h2>
+    <form>
+      이름: <input type="text" name="name"><br> 전화번호: <input type="text" name="tel"><br>
+      
+        <!-- function addAddr() {
+        const result = document.getElementById('addrlist');
+        const newAddr = document.getElementsByName("name")[0].value + ' , ' + document.getElementsByName('tel')[0].value;
+          const item = document.createElement('li');
+          const txt = document.createTextNode(newAddr);
+          item.appendChild(txt);
+          result.appendChild(item);
+      }
+      
+      
+      function resetAddr() {
+        document.getElementById('addrlist').innerHTML="";
+      }
+      
+      function changeBg() {
+        body=document.querySelector('body');
+        body.setAttribute('style','background-color:yellow');
+        //body.style.backgroundColor="yellow";
+      // body.className="bgyellow";
+     }-->
+      
+      <input type=button value="저장" onclick='addAddr()'>
+      <input type=button value="리셋" onclick='resetAddr()'>
+      <input type=button value="배경변경" onclick='changeBg()'>
+    </form>
+    <hr>
+    <h3>주소록 목록</h3>
+    <ul id="addrlist">
+    </ul>
+   
+  <!--
+    입력항목은 각각 name, tel 로 name 속성을 지정. id로 지정하는 것이 제일 간편한 방법이지만 다양한 구현 예를 보기 위해 name 속성을 사용
+    버튼은 총 세개로 리셋은 추가한 데이터를 지우는 것이고 배경변경은 뒤에서 다룰 css 변경과 연결
+    이벤트 핸들러는 onclick 속성을 사용하는 것으로 구현
+
+    스크립트부는 addAddr(), resetAddr(), changeBg() 메소드로 구성
+  -->
+
+
+  <!--
+    목록이 출력되는 부분은 id가 addrlist로 되어있으므로 getElementById로 노드를 가지고 옴
+    입력값은 해당 name 속성의 모든 노드가 목록으로 리턴되므로 [0].value와 같이 가져와야 함
+    새로운 주소록을 등록하면 <ul></ul>사이에 <li></li> 노드를 계속 추가해야 하므로 다음과 같이 createElement(), createTextNode()를 사용
+  -->
+  <script src="./3-3.js"></script>
+</body>
+</html>
